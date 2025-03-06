@@ -1,0 +1,75 @@
+html,
+body {
+  height: 100%;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+.main {
+  flex: 1 0 auto;
+}
+.footer {
+  flex: 0 0 auto;
+}
+
+[class*='__container'] {
+  max-width: 1420px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+body {
+  font-family: 'Work Sans', sans-serif;
+  background-color: $backgroundColor;
+  color: #fff;
+  position: relative;
+
+  &._lock {
+    overflow: hidden;
+  }
+}
+
+.title {
+  font-weight: 600;
+  font-size: clamp(1.9rem, 1.58rem + 1.6vw, 3rem);
+  line-height: 1.25;
+  text-transform: capitalize;
+  color: #fff;
+}
+
+.text {
+  font-weight: 400;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: $textColor;
+}
+
+.link {
+  display: inline-block;
+  padding: 1.38rem 2.6rem;
+  background-color: $accentColor;
+  font-weight: 500;
+  font-size: 1.5rem;
+  text-transform: capitalize;
+  color: #fff;
+  transition: background-color 0.3s;
+
+  @media (any-hover: hover) {
+    &:hover {
+      background-color: #15786c;
+    }
+  }
+}
+
+.section-reveal {
+  transition: transform 1s, opacity 1s;
+}
+
+.section-hidden {
+  opacity: 0;
+  transform: translateY(8rem);
+}
